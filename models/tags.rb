@@ -26,4 +26,17 @@ class Tag
     @id = id.to_i
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM tags"
+    values = []
+    tag_data = SqlRunner.run(sql, values)
+    tags = map_items(tag_data)
+    return tags
+  end
+
+  def self.map_items(tag_data)
+    return tag_data.map {|tag| Tag.new(tag) }
+  end
+  
+
 end
