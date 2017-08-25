@@ -3,9 +3,14 @@ require_relative('../models/transactions')
 
 tag1 = Tag.new({'name' => 'food'})
 tag2 = Tag.new({'name' => 'books'})
-
+bank = Tag.new({'name' => 'bank deposit'})
 tag1.save
 tag2.save
+
+startingamount = Transaction.new({
+  'amount' => '480',
+  'merchant' => "Bank of Alice",
+  "tag_id" => bank.id})
 
 transaction1 = Transaction.new({
   'amount' => '7',
