@@ -1,16 +1,16 @@
 # Need ID, amount, merchant, tag
 require_relative('sql_runner')
-require_relative('tags')
+# require_relative('tags')
 class Transaction
 
-  attr_accessor :amount, :merchant, :tags_id
+  attr_accessor :amount, :merchant, :tag_id
   attr_reader :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @amount = options['amount']
     @merchant = options['merchant']
-    @tag = options['tags_id'].to_i
+    @tag_id = options['tag_id'].to_i
   end
 
   def save()
