@@ -1,0 +1,12 @@
+body {
+  background-color: aliceblue;
+  background-image: url("../public/chockitlogo.jpg");
+}
+
+h1 {
+  background-color: yellow;
+}
+
+h2 {
+  background-color: green;
+}

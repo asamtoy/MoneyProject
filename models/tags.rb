@@ -26,6 +26,14 @@ class Tag
     @id = id.to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM tags"
+    values = []
+    tag_data = SqlRunner.run(sql, values)
+    tags = map_items(tag_data)
+    return tags
+  end
+
   def self.find(id)
     sql = "SELECT * FROM tags"
     values = []
@@ -37,6 +45,23 @@ class Tag
   def self.map_items(tag_data)
     return tag_data.map {|tag| Tag.new(tag) }
   end
+
+  def update()
+    sql = "UPDATE tags
+    SET (name) =
+    ($1)
+    WHERE id = $2"
+    values = [@name]
+    SqlRunner.run(sql, values)
+  end
+
+  def delete()
+    sql = "DELETE FROM tags
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   
 
 end
