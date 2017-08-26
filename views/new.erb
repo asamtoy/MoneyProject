@@ -16,7 +16,7 @@
       <label for="tag">Spending Category:</label>
       <select name="tag_id" id="tag_select">
         <% @tags.each do |tag| %>
-        <option value=<%= tag.id %><%= tag.name.capitalize %></option>
+        <option value=<%= tag.id %>><%= tag.name.capitalize %></option>
         <% end %>
       </select>
     </div>
