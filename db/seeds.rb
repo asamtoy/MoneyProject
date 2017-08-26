@@ -1,11 +1,26 @@
 require_relative('../models/tags')
 require_relative('../models/transactions')
 
-tag1 = Tag.new({'name' => 'food'})
+tag1 = Tag.new({'name' => 'groceries'})
 tag2 = Tag.new({'name' => 'books'})
+tag3 = Tag.new({'name' => 'clothes'})
+tag4 = Tag.new({'name' => 'coffee'})
+tag5 = Tag.new({'name' => 'physical skill development'})
+tag6 = Tag.new({'name' => 'restaurants'})
+tag7 = Tag.new({'name' => 'mountaineering supplies'})
+tag8 = Tag.new({'name' => 'rent'})
+
 bank = Tag.new({'name' => 'bank deposit'})
+
 tag1.save
 tag2.save
+tag3.save
+tag4.save
+tag5.save
+tag6.save
+tag7.save
+tag8.save
+
 bank.save
 
 startingamount = Transaction.new({
@@ -30,4 +45,4 @@ transaction4 = Transaction.new({
 
 transaction1.save
 transaction3.save
-transaction4.save 
+transaction4.save

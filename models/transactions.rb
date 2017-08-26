@@ -31,11 +31,11 @@ class Transaction
   def update()
     sql = "UPDATE transactions
     SET
-    (amount, merchant, tag)
+    (amount, merchant, tag_id)
     =
     ($1, $2, $3)
     WHERE id = $4"
-    values = [ @amount, @merchant, @tag ]
+    values = [ @amount, @merchant, @tag_id, @id ]
     SqlRunner.run(sql, values)
   end
 
@@ -48,7 +48,7 @@ end
 
 def self.all()
   sql = "SELECT * FROM transactions"
-  values = []
+  values = [ ]
   transaction_data = SqlRunner.run(sql, values)
   transactions = map_items(transaction_data)
   return transactions
