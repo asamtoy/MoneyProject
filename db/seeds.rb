@@ -6,6 +6,7 @@ tag2 = Tag.new({'name' => 'books'})
 bank = Tag.new({'name' => 'bank deposit'})
 tag1.save
 tag2.save
+bank.save
 
 startingamount = Transaction.new({
   'amount' => '480',
@@ -22,5 +23,11 @@ transaction3 = Transaction.new({
   'merchant' => 'CoOp',
   'tag_id' => tag1.id})
 
+transaction4 = Transaction.new({
+  'amount' => '400',
+  'merchant' => 'n/a',
+  'tag_id' => bank.id})
+
 transaction1.save
 transaction3.save
+transaction4.save 
