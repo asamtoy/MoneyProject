@@ -1,6 +1,4 @@
-# Need ID, amount, merchant, tag
 require_relative('sql_runner')
-# require_relative('tags')
 class Transaction
 
   attr_accessor :amount, :merchant, :tag_id

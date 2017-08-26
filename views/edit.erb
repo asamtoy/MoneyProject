@@ -1,0 +1,29 @@
+<h2>Edit Transaction</h2>
+<form method="POST" action="/transactions/<%= @transaction.id %>">
+
+    <div class="form-trans">
+      <label for="amount">Transaction Amount:</label>
+      <input type="numeric" name="amount" id="amount"
+      value="<%= @transaction.amount %>"/>
+    </div>
+
+    <div class="form-trans">
+      <label for="merchant">Merchant:</label>
+      <input type="text" name="merchant" id="merchant"
+      value="<%= @transaction.merchant %>"/>
+    </div>
+
+    <div class="form-trans">
+      <label for="tag_id">Spending Category:</label>
+      <select name="tag_id" id="tag_select">
+        <% @tags.each do |tag| %>
+        <option value=<%= tag.id %>><%= tag.name.capitalize %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-trans">
+      <input type="submit" value="Chockit"/>
+    </div>
+
+</form>
