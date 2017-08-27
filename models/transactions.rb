@@ -35,7 +35,7 @@ class Transaction
     =
     ($1, $2, $3)
     WHERE id = $4"
-    values = [ @amount, @merchant, @tag_id, @id ]
+    values = [ (@amount * (-1)), @merchant, @tag_id, @id ]
     SqlRunner.run(sql, values)
   end
 
@@ -65,6 +65,15 @@ def self.find(id)
   result = SqlRunner.run(sql, values).first
   transaction = Transaction.new(result)
   return transaction
+end
+
+# potentially dodgy; doing at 10 p.m...
+
+def sum()
+  sql = "SELECT sum(amount) FROM transactions"
+  values = [ ]
+  result = SqlRunner.run(sql, values)
+  return result
 end
 
 end

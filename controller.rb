@@ -4,6 +4,10 @@ require_relative('models/tags')
 require_relative('models/transactions')
 
 get '/transactions' do
+  erb(:homepage)
+end
+
+get '/transactions/all' do
   @transactions = Transaction.all
   erb(:index)
 end
