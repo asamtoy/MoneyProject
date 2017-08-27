@@ -2,7 +2,7 @@
 
 <div id="transaction-wrapper">
   <% @transactions.each do |transaction| %>
-
+  <hr>
   <div class="transaction">
     <h3><a href="/transactions/<%= transaction.id %>"><%= transaction.merchant %></a></h3>
     <p>Amount: <%= transaction.amount %> </p>

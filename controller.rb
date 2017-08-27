@@ -3,6 +3,10 @@ require('sinatra/contrib/all')
 require_relative('models/tags')
 require_relative('models/transactions')
 
+get '/' do
+  erb(:homepage)
+end
+
 get '/transactions' do
   erb(:homepage)
 end
@@ -15,6 +19,10 @@ end
 get '/transactions/new' do
   @tags = Tag.all
   erb(:new)
+end
+
+get '/transactions/new_spending_category' do
+  erb(:new_spending_category)
 end
 
 post '/transactions' do
