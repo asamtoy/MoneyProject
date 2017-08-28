@@ -39,9 +39,9 @@ get '/transactions/category_select' do
   erb(:category_select)
 end
 
-get '/transactions/category_sum' do
+get '/transactions/category_sum/:id' do
   @tags = Tag.all
-  erb(:category_select)
+  erb(:category_sum)
 end
 
 get '/transactions/:id' do
