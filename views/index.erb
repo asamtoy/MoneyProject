@@ -4,7 +4,7 @@
   <% @transactions.each do |transaction| %>
   <hr>
     <div class="transaction">
-      <h2><p>Amount: <%= transaction.amount %> </p></h2>
+      <h2><p>Amount: £<%= transaction.amount %> </p></h2>
       <h3><a href="/transactions/<%= transaction.id %>"><%= transaction.merchant %></a></h3>
       <form method="post" action="/transactions/<%= transaction.id %>/delete">
         <input type="submit" value="Delete Transaction"/>

@@ -1,6 +1,5 @@
 body {
   background-color: aliceblue;
-  font: helvetica;
   font-family: sans-serif;
 };
 
@@ -10,7 +9,7 @@ img {
 }
 
 #logo-wrapper {
-  margin: auto;
-  width: justify;
+  margin-left: 43%;
+  margin-right: flex;
 
 }
