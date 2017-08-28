@@ -1,0 +1,16 @@
+body {
+  background-color: aliceblue;
+  font: helvetica;
+  font-family: sans-serif;
+};
+
+img {
+  height: 200px;
+  width: 50%;
+}
+
+#logo-wrapper {
+  margin: auto;
+  width: justify;
+
+}

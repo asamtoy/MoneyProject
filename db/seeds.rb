@@ -9,7 +9,6 @@ tag5 = Tag.new({'name' => 'physical skill development'})
 tag6 = Tag.new({'name' => 'restaurants'})
 tag7 = Tag.new({'name' => 'mountaineering supplies'})
 tag8 = Tag.new({'name' => 'rent'})
-
 bank = Tag.new({'name' => 'bank deposit'})
 
 tag1.save
@@ -20,7 +19,6 @@ tag5.save
 tag6.save
 tag7.save
 tag8.save
-
 bank.save
 
 startingamount = Transaction.new({
@@ -43,6 +41,7 @@ transaction4 = Transaction.new({
   'merchant' => 'n/a',
   'tag_id' => bank.id})
 
+startingamount.save
 transaction1.save
 transaction3.save
 transaction4.save

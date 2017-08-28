@@ -4,9 +4,9 @@
   <% @transactions.each do |transaction| %>
 
   <div class="transaction">
-    <h3><a href="/transactions/<%= transaction.id %>"><%= transaction.merchant %></a></h3>
-    <p>Amount: <%= transaction.amount %> </p>
-    <p><a href="/transactions/<%= transaction.id %>">Show Transaction</a></p>
+    <h3><p>Amount: <%= transaction.amount %> </p></h3>
+    <h2><a href="/transactions/<%= transaction.id %>"><%= transaction.merchant %></a></h2>
+    <p><a href="/transactions/<%= transaction.id %>/delete">Delete Transaction</a></p>
     <p><a href="/transactions/<%= transaction.id %>/edit">Edit Transaction</a></p>
     <% end %>
 

@@ -48,7 +48,7 @@ post '/transactions/:id' do
 end
 
 post '/transactions/:id/delete' do
-  transaction = Transaction.find(params['id'])
-  transaction.delete
-  redirect to '/students'
+  transaction = Transaction.find( params[:id] )
+  transaction.delete()
+  redirect to '/all'
 end
