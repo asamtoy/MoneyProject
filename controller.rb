@@ -34,12 +34,18 @@ get '/transactions/sum' do
   erb(:sum)
 end
 
+get '/transactions/category_select' do
+  @tags = Tag.all
+  erb(:category_select)
+end
+
 get '/transactions/category_sum' do
-  erb(:category_sum)
+  @tags = Tag.all
+  erb(:category_select)
 end
 
 get '/transactions/:id' do
-  @transaction = Transaction.find(params['id'])
+  @transaction = Transaction.find(params['id'].to_i)
   erb(:show)
 end
 
@@ -63,6 +69,6 @@ end
 
 get '/transactions/all/category/:id' do
   @transactions = Transaction.get_by_category( params[:id])
-  category_total = @transactions.sum
-  erb(:category_sum_select)
+  category_total = @transactions.to_i.sum
+  erb(:category_sum)
 end

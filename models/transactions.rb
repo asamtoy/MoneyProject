@@ -82,12 +82,6 @@ def self.get_by_category()
   transaction_data = SqlRunner.run(sql, values)
 end
 
-# not ready for prime time
-# def self.sum_by_category()
-#   sql = "SELECT merchant, count(*) FROM transactions GROUP BY merchant"
-#   values = [ ]
-#   result = SqlRunner.run(sql, values)[0]["total"].to_f
-#   return result
-# end
+
 
 end
