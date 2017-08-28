@@ -10,5 +10,5 @@ CREATE TABLE transactions (
   ID SERIAL8 primary key,
   amount NUMERIC,
   merchant VARCHAR(255),
-  tag_id INT8 REFERENCES tags(id)
+  tag_id INT8 REFERENCES tags(id),
 );

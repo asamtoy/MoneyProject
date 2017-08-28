@@ -58,5 +58,11 @@ end
 post '/transactions/:id/delete' do
   transaction = Transaction.find( params[:id] )
   transaction.delete()
-  redirect to '/all'
+  redirect to '/transactions'
+end
+
+get '/transactions/all/category/:id' do
+  @transactions = Transaction.get_by_category( params[:id])
+  category_total = @transactions.sum
+  erb(:category_sum)
 end

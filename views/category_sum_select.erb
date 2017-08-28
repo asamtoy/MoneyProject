@@ -1,0 +1,21 @@
+<p>Please select a category from the menu below in order to see how much was spent on it.</p>
+
+<form method="POST" action="/transactions">
+  <div class="form-wrapper">
+
+    <div class="form-trans">
+      <label for="tag">Spending Category:</label>
+      <select name="tag_id" id="tag_select">
+        <% @tags.each do |tag| %>
+        <option value=<%= tag.id %>><%= tag.name.capitalize %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-trans">
+      <input type="submit" value="Chockit"/>
+    </div>
+
+  </div>
+
+</form>

@@ -75,6 +75,13 @@ def self.sum()
   return result
 end
 
+def self.get_by_category()
+  sql = "SELECT * FROM transactions
+  WHERE id = $1"
+  values = [@id]
+  transaction_data = SqlRunner.run(sql, values)
+end
+
 # not ready for prime time
 # def self.sum_by_category()
 #   sql = "SELECT merchant, count(*) FROM transactions GROUP BY merchant"
