@@ -1,7 +1,3 @@
-# needs primary key, name
-# needs save, create functions
-# May as well CRUD them
-
 require_relative('sql_runner')
 
 class Tag
@@ -62,6 +58,6 @@ class Tag
     SqlRunner.run(sql, values)
   end
 
-  
+
 
 end

@@ -22,12 +22,20 @@ get '/transactions/new' do
 end
 
 get '/transactions/new_spending_category' do
-  erb(:new_spending_category)
+  erb(:new_spending_category_2)
 end
 
 post '/transactions' do
   Transaction.new(params).save
   redirect to '/transactions'
+end
+
+get '/transactions/sum' do
+  erb(:sum)
+end
+
+get '/transactions/category_sum' do
+  erb(:category_sum)
 end
 
 get '/transactions/:id' do

@@ -7,15 +7,14 @@
   </head>
       <header>
         <div id="logo-wrapper"> <a href='/transactions'>
-          <img src="chockitlogo.jpg" alt="Chockit Money Minder">
+          <img src="/chockitlogo.jpg" alt="Chockit Money Minder">
         </div>
         <hr>
         </a></li>
         <nav id="menu">
+        <li class="menu-item"> <a href='/transactions/sum'>Remaining Balance: £<%=Transaction.sum %> </a></li>
         <li class="menu-item"> <a href='/transactions/all'>All Transactions</a></li>
         <li class="menu-item"> <a href='/transactions/new'>New Transaction</a></li>
-        <hr>
-        <li class="menu-item">Remaining Balance</li>
         <li class="menu-item">Total Spent by Category</li>
         <hr>
         </nav>
@@ -25,10 +24,7 @@
   </body>
     <footer>
       <hr>
-      <nav id="menu">
-        <!-- <li class="menu-item"> <a href="/transactions/new_spending_category">Create new spending category</a></li>
-        <li class="menu-item">Other Functions</li> -->
-      </nav>
+      <p>“Formal education will make you a living; self-education will make you a fortune.”  Jim Rohn</p>
   </footer>
 
 </html>

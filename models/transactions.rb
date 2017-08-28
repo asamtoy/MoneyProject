@@ -67,20 +67,20 @@ def self.find(id)
   return transaction
 end
 
-# potentially dodgy; doing at 10 p.m...
 
 def self.sum()
-  sql = "SELECT sum(amount) AS total FROM transactions"
+  sql = "SELECT SUM(amount) AS total FROM transactions"
   values = [ ]
   result = SqlRunner.run(sql, values)[0]["total"].to_f
   return result
 end
 
-def self.sum()
-  sql = "SELECT merchant, count(*) FROM transactions GROUP BY merchant"
-  values = [ ]
-  result = SqlRunner.run(sql, values)[0]["total"].to_f
-  return result
-end
+# not ready for prime time
+# def self.sum_by_category()
+#   sql = "SELECT merchant, count(*) FROM transactions GROUP BY merchant"
+#   values = [ ]
+#   result = SqlRunner.run(sql, values)[0]["total"].to_f
+#   return result
+# end
 
 end
