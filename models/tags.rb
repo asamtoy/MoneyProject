@@ -35,7 +35,7 @@ class Tag
     values = []
     tag_data = SqlRunner.run(sql, values)
     tags = map_items(tag_data)
-    return tags
+    return tags[0]
   end
 
   def self.map_items(tag_data)
