@@ -1,6 +1,13 @@
 <h2> Select a Category </h2>
 
-<form method="POST" action="/categories/show">
+<% @tags.each do |tag| %>
+  <div>
+    <a href=<%= "categories/#{tag.id}" %>> <%= tag.name %> </a>
+  </div>
+<% end %>
+
+
+<!-- <form method="POST" action="/categories/:id">
   <div class="form-wrapper">
 
     <div class="form-trans">
@@ -13,10 +20,9 @@
     </div>
 
     <div class="form-trans">
-      <input type="submit" value="Confirm"/>
+      <input type="submit" value="Check Category"/>
     </div>
 
   </div>
 
-</form>
- <h4>*Leave the minus sign in if this is a debit.  Delete if this is a deposit.</h4>
+</form> -->

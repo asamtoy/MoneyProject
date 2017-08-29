@@ -21,10 +21,6 @@ get '/transactions/new' do
   erb(:new)
 end
 
-get '/transactions/new_spending_category' do
-  erb(:new_spending_category_2)
-end
-
 post '/transactions' do
   Transaction.new(params).save
   redirect to '/transactions'
@@ -34,11 +30,11 @@ get '/transactions/sum' do
   erb(:sum)
 end
 
-get '/transactions/category_select' do
-  @tags = Tag.all
-  redirect to "/transactions/all/category/:id"
-end
-
+# get '/transactions/category_select' do
+#   @tags = Tag.all
+#   redirect to "/transactions/all/category/:id"
+# end
+#
 
 #TAG SHOW
 
@@ -54,6 +50,8 @@ get '/categories/:id' do
   # category_total = @transactions.to_i.sum
   erb(:"categories/show")
 end
+
+# /categories/show?
 
 get '/transactions/:id' do
   @transaction = Transaction.find(params['id'].to_i)
