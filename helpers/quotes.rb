@@ -1,0 +1,74 @@
+class Quotes
+
+  @@quotes = [
+    '"It is not the man who has too little, but the man who craves more, that is poor." - Seneca',
+
+    '"Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver." - Ayn Rand',
+
+    '"Only buy something that you’d be perfectly happy to hold if the market shuts down for ten years." - Warren Buffett',
+
+    '"Not he who has much is rich, but he who gives much." - Erich Fromm',
+
+    '"Time is more valuable than money. You can get more money, but you cannot get more time." - Jim Rohn',
+
+    '"That man is richest whose pleasures are cheapest." - Henry David Thoreau',
+
+    '"Wealth is the ability to fully experience life." - Henry David Thoreau',
+
+    '"If you would be wealthy, think of saving as well as getting." - Ben Franklin',
+
+    '"I made my money the old-fashioned way. I was very nice to a wealthy relative right before he died." - Malcolm Forbes',
+
+    '"If we command our wealth, we shall be rich and free. If our wealth commands us, we are poor indeed." - Edmund Burke',
+
+    '"The real measure of your wealth is how much you’d be worth if you lost all your money." - Unknown',
+
+    '"Never spend your money before you have earned it." - Thomas Jefferson',
+
+    '"A wise person should have money in their head, but not in their heart." - Jonathan Swift',
+
+    '"If money is your hope for independence you will never have it. The only real security that a man will have in this world is a reserve of knowledge, experience, and ability." - Henry Ford',
+
+    '"Money, if it does not bring you happiness, will at least help you be miserable in comfort." – Helen Gurley Brown',
+
+    '"Money is better than poverty, if only for financial reasons." – Woody Allen',
+
+    '"Money is not the most important thing in the world. Love is. Fortunately, I love money." – Jackie Mason',
+
+    '"The safest way to double your money is to fold it over and put it in your pocket." – Kin Hubbard',
+
+    '"A bank is a place that will lend you money if you can prove that you don\'t need it." – Bob Hope',
+
+    '"Money is the best deodorant." – Elizabeth Taylor',
+
+    '"Money often costs too much." – Ralph Waldo Emerson',
+
+    '"There is a very easy way to return from a casino with a small fortune: go there with a large one." - Jack Yelton',
+
+    '"What’s worth doing is worth doing for money." – Gordon Gekko',
+
+    '"All I ask is the chance to prove that money can\'t make me happy." - Spike Milligan',
+
+    '"You should always live within your income, even if you have to borrow to do so." - Josh Billings',
+
+    '"What\'s the use of happiness? It can\'t buy you money." - Henry Youngman',
+
+    '"If you owe the bank $100 that\'s your problem. If you owe the bank $100 million, that\'s the bank\'s problem." - JP Getty',
+
+    '"I have enough money to last me the rest of my life, unless I buy something." - Jackie Mason',
+
+    '"When people ask me if I have any spare change, I tell them I have it at home in my spare wallet."- Nick Arnette',
+
+    '"If hard work were such a wonderful thing, surely the rich would have kept it all to themselves." - Lane Kirkland',
+
+    '"What is the difference between a taxidermist and a tax collector? The taxidermist takes only your skin." – Mark Twain',
+
+    '"I’m tired of hearing about money, money, money, money, money. I just want to play the game, drink Pepsi, wear Reebok." — Shaquille O’Neal'
+  ]
+
+  def self.random_quote()
+    random = @@quotes.sample
+    return random
+  end
+
+end

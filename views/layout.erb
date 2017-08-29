@@ -24,8 +24,9 @@
     <%= yield %>
   </body>
     <footer>
+      <% require_relative("../helpers/quotes.rb") %>
       <hr>
-      <p>“Formal education will make you a living; self-education will make you a fortune.”  Jim Rohn</p>
+      <p><%= Quotes.random_quote() %></p>
   </footer>
 
 </html>
