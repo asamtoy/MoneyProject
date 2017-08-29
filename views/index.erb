@@ -4,12 +4,9 @@
   <% @transactions.each do |transaction| %>
   <hr>
     <div class="transaction">
-      <h2><p>Amount: £<%= transaction.amount %> </p></h2>
-      <h3><a href="/transactions/<%= transaction.id %>"><%= transaction.merchant %></a></h3>
-      <form method="post" action="/transactions/<%= transaction.id %>/delete">
-        <input type="submit" value="Delete Transaction"/>
+      <h4><a href="/transactions/<%= transaction.id %>"><%= transaction.merchant %></a></h4>
+      <h5><p>Amount: £<%= transaction.amount %> </p></h5>
       </form>
-      <p><a href="/transactions/<%= transaction.id %>/edit">Edit Transaction</a></p>
       <% end %>
 
 </div>

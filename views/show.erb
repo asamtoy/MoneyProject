@@ -1,7 +1,7 @@
 <p>Transaction Amount: <%= @transaction.amount %></p>
 <p>Where: <%= @transaction.merchant %></p>
 <p>Category: <%= @transaction.tag_id %></p>
-<p><a href="/transactions/<%= @transaction.id %>/edit">Edit Order</a></p>
+<p><a href="/transactions/<%= @transaction.id %>/edit">Edit Transaction</a></p>
 <form method="post" action="/transactions/<%= @transaction.id %>/delete">
-  <input type="submit" value="Delete Order"/>
+  <input type="submit" value="Delete Transaction"/>
 </form>

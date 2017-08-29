@@ -75,11 +75,20 @@ def self.sum()
   return result
 end
 
-def self.get_by_category()
+def self.get_by_category( tag_id )
   sql = "SELECT * FROM transactions
-  WHERE id = $1"
-  values = [@id]
+  WHERE tag_id = $1"
+  values = [tag_id]
   transaction_data = SqlRunner.run(sql, values)
+  transactions = map_items(transaction_data)
+  return transactions
+end
+
+def self.sum_by_category( tag_id )
+  sql = "SELECT SUM(amount) AS total FROM transactions WHERE tag_id = $1"
+  values = [tag_id]
+  result = SqlRunner.run(sql, values)[0]["total"].to_f
+  return result
 end
 
 

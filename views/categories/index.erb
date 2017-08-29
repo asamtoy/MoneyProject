@@ -1,0 +1,12 @@
+<h2> Categories </h2>
+
+<div id="tag-wrapper">
+  <% @tags.each do |tag| %>
+  <hr>
+    <div class="tag">
+      <h4><a href="/categories/<%= tag.id %>"><%= tag.name %></a></h4>
+      <h5><p>Amount: £<%= category.sum %> </p></h5>
+      </form>
+      <% end %>
+
+</div>

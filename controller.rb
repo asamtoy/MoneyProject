@@ -36,12 +36,21 @@ end
 
 get '/transactions/category_select' do
   @tags = Tag.all
-  erb(:category_select)
+  redirect to "/transactions/all/category/:id"
 end
 
-get '/transactions/category_sum/:id' do
-  @tags = Tag.all
-  erb(:category_sum)
+
+#TAG SHOW
+get '/categories/:id' do
+  @category = Tag.find( params[:id] )
+  @sum = Transaction.sum_by_category( params[:id] )
+  puts "sum #{@sum}"
+  # category_total = @transactions.to_i.sum
+  erb(:"categories/show")
+end
+
+post 'category_sum' do
+
 end
 
 get '/transactions/:id' do
@@ -65,10 +74,4 @@ post '/transactions/:id/delete' do
   transaction = Transaction.find( params[:id] )
   transaction.delete()
   redirect to '/transactions'
-end
-
-get '/transactions/all/category/:id' do
-  @transactions = Transaction.get_by_category( params[:id])
-  category_total = @transactions.to_i.sum
-  erb(:category_sum)
 end

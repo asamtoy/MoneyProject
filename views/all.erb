@@ -1,4 +1,4 @@
-<h2> All Transactionss </h2>
+<h2> All Transactions </h2>
 
 <div id="transaction-wrapper">
   <% @transactions.each do |transaction| %>
@@ -6,7 +6,6 @@
   <div class="transaction">
     <h3><p>Amount: <%= transaction.amount %> </p></h3>
     <h2><a href="/transactions/<%= transaction.id %>"><%= transaction.merchant %></a></h2>
-    <!-- <p><a href="/transactions/<%= transaction.id %>/delete">Delete Transaction</a></p> -->
     <form method="post" action="/transactions/<%= @transaction.id %>/delete">
       <input type="submit" value="Delete Transaction"/>
     </form>
