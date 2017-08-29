@@ -33,10 +33,18 @@ class Tag
   def self.find(id)
     sql = "SELECT * FROM tags"
     values = []
-    tag_data = SqlRunner.run(sql, values)
-    tags = map_items(tag_data)
-    return tags[0]
+    tag = SqlRunner.run(sql, values)
+    result = Tag.new(id)
+    return result
   end
+
+  # def self.find(id)
+  #   sql = "SELECT * FROM tags"
+  #   values = []
+  #   tag_data = SqlRunner.run(sql, values)
+  #   tags = map_items(tag_data)
+  #   return tags[0]
+  # end
 
   def self.map_items(tag_data)
     return tag_data.map {|tag| Tag.new(tag) }

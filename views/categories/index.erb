@@ -5,24 +5,3 @@
     <a href=<%= "categories/#{tag.id}" %>> <%= tag.name %> </a>
   </div>
 <% end %>
-
-
-<!-- <form method="POST" action="/categories/:id">
-  <div class="form-wrapper">
-
-    <div class="form-trans">
-      <label for="tag">Spending Category:</label>
-      <select name="tag_id" id="tag_select">
-        <% @tags.each do |tag| %>
-        <option value=<%= tag.id %>><%= tag.name.capitalize %></option>
-        <% end %>
-      </select>
-    </div>
-
-    <div class="form-trans">
-      <input type="submit" value="Check Category"/>
-    </div>
-
-  </div>
-
-</form> -->
