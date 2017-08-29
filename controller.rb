@@ -40,7 +40,7 @@ end
 get '/categories/:id' do
   @tags = Tag.all
   @category = Tag.find( params[:id] )
-  @tag = Tag.find( params[:id])
+  # @tag = Tag.find( params[:id])
   @sum = Transaction.sum_by_category( params[:id] )
   puts "sum #{@sum}"
   # category_total = @transactions.to_i.sum
