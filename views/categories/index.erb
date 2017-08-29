@@ -1,12 +1,22 @@
-<h2> Categories </h2>
+<h2> Select a Category </h2>
 
-<div id="tag-wrapper">
-  <% @tags.each do |tag| %>
-  <hr>
-    <div class="tag">
-      <h4><a href="/categories/<%= tag.id %>"><%= tag.name %></a></h4>
-      <h5><p>Amount: £<%= category.sum %> </p></h5>
-      </form>
-      <% end %>
+<form method="POST" action="/categories/show">
+  <div class="form-wrapper">
 
-</div>
+    <div class="form-trans">
+      <label for="tag">Spending Category:</label>
+      <select name="tag_id" id="tag_select">
+        <% @tags.each do |tag| %>
+        <option value=<%= tag.id %>><%= tag.name.capitalize %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-trans">
+      <input type="submit" value="Confirm"/>
+    </div>
+
+  </div>
+
+</form>
+ <h4>*Leave the minus sign in if this is a debit.  Delete if this is a deposit.</h4>

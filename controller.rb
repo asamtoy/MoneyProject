@@ -41,16 +41,18 @@ end
 
 
 #TAG SHOW
+
+get '/categories' do
+  @tags = Tag.all
+  erb(:"categories/index")
+end
+
 get '/categories/:id' do
   @category = Tag.find( params[:id] )
   @sum = Transaction.sum_by_category( params[:id] )
   puts "sum #{@sum}"
   # category_total = @transactions.to_i.sum
   erb(:"categories/show")
-end
-
-post 'category_sum' do
-
 end
 
 get '/transactions/:id' do
