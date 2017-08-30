@@ -7,7 +7,7 @@ class FlatteryQuotes
     'Checking up on your money? Smart move.',
     'Using Chockit? Brilliant, brilliant, brilliant.',
     'Well done.',
-    'Your wisdome is within: within your heart, your mind, and your Chockit.',
+    'Your wisdom is within: within your heart, your mind, and your Chockit.',
     'Most people do not use Chockit.  Most people are also not on their way to becoming billionaires.',
     'You are making wise moves.',
     'If you can read this message, you are making wise financial decisions.',
