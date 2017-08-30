@@ -30,6 +30,11 @@ get '/transactions/sum' do
   erb(:sum)
 end
 
+post '/transactions/delete_all' do
+  Transaction.delete_all
+  redirect to '/transactions'
+end
+
 #TAG SHOW
 
 get '/categories' do

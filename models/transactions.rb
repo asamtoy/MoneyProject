@@ -46,6 +46,12 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
+def self.delete_all()
+  sql = "DELETE FROM transactions"
+  values = []
+  SqlRunner.run(sql, values)
+end
+
 def self.all()
   sql = "SELECT * FROM transactions"
   values = [ ]
