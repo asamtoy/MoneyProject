@@ -63,7 +63,7 @@ class Quotes
 
     '"What is the difference between a taxidermist and a tax collector? The taxidermist takes only your skin." – Mark Twain',
 
-    '"I’m tired of hearing about money, money, money, money, money. I just want to play the game, drink Pepsi, wear Reebok." — Shaquille O’Neal'
+    '"I’m tired of hearing about money, money, money, money, money. I just want to play the game, drink Pepsi, wear Reebok." — Shaquille O’Neal',
 
     '"My formula for success: rise early, work hard, strike oil." J. Paul Getty'
   ]
