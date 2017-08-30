@@ -53,7 +53,7 @@ class Quotes
 
     '"What\'s the use of happiness? It can\'t buy you money." - Henry Youngman',
 
-    '"If you owe the bank $100 that\'s your problem. If you owe the bank $100 million, that\'s the bank\'s problem." - JP Getty',
+    '"If you owe the bank $100 that\'s your problem. If you owe the bank $100 million, that\'s the bank\'s problem." - J. Paul Getty',
 
     '"I have enough money to last me the rest of my life, unless I buy something." - Jackie Mason',
 
@@ -64,6 +64,8 @@ class Quotes
     '"What is the difference between a taxidermist and a tax collector? The taxidermist takes only your skin." – Mark Twain',
 
     '"I’m tired of hearing about money, money, money, money, money. I just want to play the game, drink Pepsi, wear Reebok." — Shaquille O’Neal'
+
+    '"My formula for success: rise early, work hard, strike oil." J. Paul Getty'
   ]
 
   def self.random_quote()
