@@ -1,0 +1,4 @@
+# Chockit was the first project I worked on in Ruby.  It is a personal finance tracker that allows for the creation, reading,
+editing, and deletion of transactions, and was planned and organised based on the frustrations I've faced with other money trackers I've used in the past.  
+In addition, I wanted to use lessons learned from B.J. Fogg's book Persuasive Technology and Nir Eyal's Hooked, on how to make technology more engaging and "addictive" in the most positive sense.  Toward that end, the app incorporates randomness and flattery to engage the user.  I realised that this was more successful than I had anticipated when I found myself, during Pomodoro breaks, refreshing the app over and over again in order to see what would come up.  
+These lessons were put to use in one of my other pinned projects, The Daily Fail.  
